@@ -268,7 +268,9 @@ proc create_root_design { parentCell design_name temp_options} {
           PCIE_APERTURES_DUAL_ENABLE {0} \
           PCIE_APERTURES_SINGLE_ENABLE {1} \
           PMC_CRP_PL0_REF_CTRL_FREQMHZ {200} \
+          PMC_QSPI_FBCLK {{ENABLE 1} {IO {PMC_MIO 6}}} \
           PMC_QSPI_PERIPHERAL_ENABLE {1} \
+          PMC_QSPI_PERIPHERAL_MODE {Dual Parallel} \
           PMC_USE_NOC_PMC_AXI0 {1} \
           PMC_USE_PMC_NOC_AXI0 {1} \
           PS_BOARD_INTERFACE {Custom} \
@@ -323,7 +325,9 @@ proc create_root_design { parentCell design_name temp_options} {
           PCIE_APERTURES_DUAL_ENABLE {0} \
           PCIE_APERTURES_SINGLE_ENABLE {1} \
           PMC_CRP_PL0_REF_CTRL_FREQMHZ {200} \
+          PMC_QSPI_FBCLK {{ENABLE 1} {IO {PMC_MIO 6}}} \
           PMC_QSPI_PERIPHERAL_ENABLE {1} \
+          PMC_QSPI_PERIPHERAL_MODE {Dual Parallel} \
           PMC_USE_NOC_PMC_AXI0 {1} \
           PMC_USE_PMC_NOC_AXI0 {1} \
           PS_BOARD_INTERFACE {Custom} \
@@ -390,7 +394,6 @@ proc create_root_design { parentCell design_name temp_options} {
         SMON_TEMP_AVERAGING_SAMPLES {0} \
       } \
     ] $versal_cips_0
-    
   }
 
   # Create instance: axi_dbg_hub_0, and set properties
